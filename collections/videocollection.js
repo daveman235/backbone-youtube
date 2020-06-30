@@ -6,7 +6,8 @@ var VideoCollection = Backbone.Collection.extend({
     url: function () {
         var myApiKey = 'AIzaSyBnJsYpTzJ19zAX95PRyS0Nr1zz5HTpfpk'
         var otherApiKey = 'AIzaSyCu1okWlNecCAAqGlLnb6MUdaqd8XZVxbU'
-        return 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=+' + `${this.searchedVideo}` + '&type=video&key=' + otherApiKey
+        var other = "AIzaSyBevKjuQ6cbwpJb0v_xmvcfJZMi4E4vJuE"
+        return 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=+' + `${this.searchedVideo}` + '&type=video&key=' + other
     },
 
     //when the currentSearchTerm is updated in the model, it 
